@@ -36,6 +36,9 @@ public class ScheduleGenerator {
    * @return a list of all neighbors of the current schedule
    */
   public List<List<List<Integer>>> getNeighbors(List<List<Integer>> schedule) {
+    if (schedule.size()==0) {
+        return new ArrayList<>();
+      }
     List<List<List<Integer>>> neighbors = new ArrayList<>();
     for (int i = 0; i < schedule.size(); i++) {
 

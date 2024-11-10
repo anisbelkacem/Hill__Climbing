@@ -27,8 +27,7 @@ public final class HillClimbing {
   public List<List<Integer>> optimize(
       int[] jobs, int numMachines, int maxIterations, int restartThreshold) {
     if (numMachines == 0 || jobs.length == 0) {
-      List<List<Integer>> result = new ArrayList<>();
-      return result;
+      return new ArrayList<>();
     }
     List<List<Integer>> currentSchedule = generator.generateSchedule(jobs, numMachines);
     int currentMakespan = fitnessFunction.calculateMakespan(currentSchedule);

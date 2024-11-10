@@ -24,8 +24,7 @@ public final class HillClimbing {
    *     triggered
    * @return the optimal schedule
    */
-  public List<List<Integer>> optimize(
-      int[] jobs, int numMachines, int maxIterations, int restartThreshold) {
+  public List<List<Integer>> optimize(int[] jobs, int numMachines, int maxIterations, int restartThreshold) {
     if (numMachines == 0 || jobs.length == 0 ) {
       return new ArrayList<>();
     }

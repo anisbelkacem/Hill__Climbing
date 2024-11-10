@@ -26,7 +26,7 @@ public final class HillClimbing {
    */
   public List<List<Integer>> optimize(
       int[] jobs, int numMachines, int maxIterations, int restartThreshold) {
-    if (numMachines == 0 || jobs.length == 0) {
+    if (numMachines == 0 || jobs.length == 0 || restartThreshold ==0 || maxIterations == 0) {
       return new ArrayList<>();
     }
     List<List<Integer>> currentSchedule = generator.generateSchedule(jobs, numMachines);

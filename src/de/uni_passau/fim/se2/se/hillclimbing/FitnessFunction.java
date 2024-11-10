@@ -13,7 +13,6 @@ public class FitnessFunction {
    */
   int calculateMakespan(List<List<Integer>> schedule) {
     int maxSum = 0;
-
     for (List<Integer> machineJobs : schedule) {
       int currentSum = 0;
       for (Integer job : machineJobs) {

@@ -17,7 +17,7 @@ public class HillClimbingTest {
         HillClimbing hillClimbing = new HillClimbing(generator, fitnessGenerator);
         int[] jobs = {1, 2, 3, 4};
 
-        List<List<Integer>> result = hillClimbing.optimize(jobs, 2, 100, 100);
+        List<List<Integer>> result = hillClimbing.optimize(jobs, 2, 10, 10);
         int expected = 5;
         assertEquals(expected, fitnessGenerator.calculateMakespan(result));
     }
@@ -29,7 +29,7 @@ public class HillClimbingTest {
         HillClimbing hillClimbing = new HillClimbing(generator, fitnessGenerator);
         int[] jobs = {1};
 
-        List<List<Integer>> result = hillClimbing.optimize(jobs, 2, 100, 100);
+        List<List<Integer>> result = hillClimbing.optimize(jobs, 2, 10, 10);
         int expected = 1;
         assertEquals(expected, fitnessGenerator.calculateMakespan(result));
     }

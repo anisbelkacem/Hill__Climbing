@@ -53,7 +53,7 @@ public final class HillClimbing {
         iterationsWithoutImprovement++;
       }
 
-      if (iterationsWithoutImprovement >= restartThreshold) {
+      if (iterationsWithoutImprovement > restartThreshold) {
         currentSchedule = generator.generateSchedule(jobs, numMachines);
         currentMakespan = fitnessFunction.calculateMakespan(currentSchedule);
         iterationsWithoutImprovement = 0;

@@ -14,6 +14,10 @@ public class ScheduleGenerator {
    * @return a random schedule
    */
   public List<List<Integer>> generateSchedule(int[] jobs, int numMachines) {
+    if (numMachines == 0) {
+        List<List<Integer>> result = new ArrayList<>();
+        return result;
+      }
     List<List<Integer>> schedule = new ArrayList<>();
     for (int i = 0; i < numMachines; i++) {
       schedule.add(new ArrayList<>());

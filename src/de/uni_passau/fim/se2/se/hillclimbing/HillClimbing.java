@@ -39,6 +39,7 @@ public final class HillClimbing {
       int bestMakespan = Integer.MAX_VALUE;
 
       for (List<List<Integer>> neighbor : generator.getNeighbors(currentSchedule)) {
+        
         int neighborMakespan = fitnessFunction.calculateMakespan(neighbor);
         if (neighborMakespan < bestMakespan) {
           bestMakespan = neighborMakespan;
